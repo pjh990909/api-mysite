@@ -37,4 +37,12 @@
 			where no = #{no}
 		]]>
 	</update>
+	
+	<!-- join 회원가입 -->
+	<insert id="insert" parameterType="com.javaex.vo.UserVo">
+		<![CDATA[
+			INSERT INTO users
+			VALUES (null,#{id}, #{password},#{name},#{gender})
+		]]>
+	</insert>
 </mapper>
