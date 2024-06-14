@@ -76,12 +76,13 @@ public class UserController {
 	
 	//회원정보수정
 	@PutMapping("/api/users/modify")
-	public JsonResult modify(@RequestBody UserVo userVo, HttpServletRequest request) {
+	public JsonResult modify(@RequestBody UserVo userVo,HttpServletRequest request) {
 		System.out.println("UserController.modify()");
 		
 		System.out.println(userVo);
 		
 		int no = JwtUtil.getNoFromHeader(request);
+		
 		if(no != -1) {
 			//db에 수정시킨다
 			userService.exeModify(userVo);

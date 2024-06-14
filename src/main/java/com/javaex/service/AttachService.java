@@ -64,8 +64,7 @@ public class AttachService {
 			bos.close();
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		;
+		};
 		
 		return saveName;
 	}
